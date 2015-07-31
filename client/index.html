@@ -1,0 +1,26 @@
+<html ng-app="myApp">
+<head>
+	<title>Black Belt 2.0</title>
+	<link rel="stylesheet" href="/assets/css/materialize.min.css">
+	<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- require angular -->
+	<script type="text/javascript" src="/assets/js/angular.js"></script>
+	<script type="text/javascript" src="/assets/js/angular-route.min.js"></script>
+	<script type="text/javascript" src="/js/modules/modules.js"></script>
+	<script type="text/javascript" src="/js/factories/poll.ng.js"></script>
+	<script type="text/javascript" src="/js/controllers/polls.ng.js"></script>
+	<script type="text/javascript" src="/js/partialRoutes.js"></script>
+
+</head>
+<!-- everything in the body is going to use the friends controller (this gives us access to the friends controller $scope) -->
+<body>
+<div ng-controller="PollsController as pc">
+	<div class="container section">
+		<div ng-view class="section"></div>
+	</div>
+</div>
+</div>
+</body>
+</html>

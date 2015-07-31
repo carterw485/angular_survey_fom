@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col s12">
+		<a href="#/dashboard" class="col s2 offset-s8">Back to all Surveys</a>
+	</div>
+</div>
+<div class="row">
+	<h4 ng-bind="pc.poll.title"></h4>
+	<h6>Click the Vote button to choose one.</h6>
+</div>
+<table>
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Current Votes</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="option in pc.poll.options">
+		<td ng-bind="option.answer"></td>
+		<td ng-bind="option.votes"></td>
+		<td><button class="btn blue waves-effect waves-light" ng-click="pc.vote({id: pc.poll._id, option: option.answer})">Vote</button></td>
+	</tr>
+</table>

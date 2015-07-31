@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col s12">
+		<a href="#/dashboard" class="col s2 offset-s8">Cancel</a>
+	</div>
+</div>
+<div class="row">
+	<h4>Put the question and options here:</h4>
+</div>
+
+<div class="row">
+	<div class="input-field col s9">
+		<input type="text" id="question" ng-model="pc.newPoll.title">
+		<label for="question">Question</label>
+	</div>
+	<p class="col s3 red-text" ng-repeat="error in pc.errors" ng-bind="error"></p>
+</div>
+<div class="row">
+	<div class="input-field col s3">
+		<input type="text" id="option1" ng-model="pc.newPoll.options[0].answer">
+		<label for="option1">Option 1</label>
+	</div>
+</div>
+<div class="row">
+	<div class="input-field col s3">
+		<input type="text" id="option2" ng-model="pc.newPoll.options[1].answer">
+		<label for="option2">Option 2</label>
+	</div>
+</div>
+<div class="row">
+	<div class="input-field col s3">
+		<input type="text" id="option3" ng-model="pc.newPoll.options[2].answer">
+		<label for="option3">Option 3</label>
+	</div>
+</div>
+<div class="row">
+	<div class="input-field col s3">
+		<input type="text" id="option4" ng-model="pc.newPoll.options[3].answer">
+		<label for="option4">Option 4</label>
+	</div>
+</div>
+<div class="row">
+	<div class="input-field col s9 right-align">
+		<button class="btn blue waves-effect waves-light" ng-click="pc.createPoll(pc.newPoll)">Create Survey</button>
+	</div>
+</div>
